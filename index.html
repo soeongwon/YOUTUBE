@@ -36,7 +36,7 @@
                     </ul>
                 </div>
                 <div class="viedotitle">
-                    <span class="vtitle clamp">[뮤지컬 번지점프를 하다 : MUSIC ESSAY] 왈츠 | 강필석, 성두섭, 전미도, 김지현, 이재균, 윤소호, 박란주, 임기홍, 진상현, 박범정, 김성현, 안재영, 이지호, 김찬호, 황호진, 노희찬, 이효림, 신혜원, 진보람, 안소연 | 뮤지컬 달 컴퍼니</span>
+                    <span class="vtitle clamp">[뮤지컬 번지점프를 하다 : MUSIC ESSAY] 왈츠 | 강필석, 성두섭, 전미도, 김지현, 이재균, 윤소호, 박란주, 임기홍, 진상현, 박범정, 김성현, 안재영, 이지호, 김찬호, 황호진, 노희찬, 이효림, 신혜원, 진보람, 안소연  | 뮤지컬 달 컴퍼니</span>
                     <button class="tbutton">
                         <i class="fas fa-caret-down"></i>
                     </button>
@@ -116,6 +116,17 @@
         more.click(function(){
             $(this).toggleClass('clicked');
             $(title).toggleClass('clamp');
+        });
+
+        var aBtn = $(".actions > li > button");
+        var i = $(".actions > li > button > i")
+        aBtn.eq(0).click(function(){
+            $(i).eq(0).toggleClass('active');
+            $(i).eq(1).removeClass('active');
+        });
+        aBtn.eq(1).click(function(){
+            $(i).eq(1).toggleClass('active');
+            $(i).eq(0).removeClass('active');
         });
     </script>
 </body>
